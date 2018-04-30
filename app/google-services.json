@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "226771104856",
+    "firebase_url": "https://paywithtime-851e7.firebaseio.com",
+    "project_id": "paywithtime-851e7",
+    "storage_bucket": "paywithtime-851e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226771104856:android:d76be0dce188bed5",
+        "android_client_info": {
+          "package_name": "com.naseem.paywithtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226771104856-rgtfn28vuhd5afctvi35dtgc1qlmbqcq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.naseem.paywithtime",
+            "certificate_hash": "013f43c9a5d380c46de43c04644418dbe5d2a253"
+          }
+        },
+        {
+          "client_id": "226771104856-05o51paf76bi3kmp8s43e0n5oald2ueh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx-dZW_VVY5g2WFgWmQqOB00hfApUMEsY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226771104856-05o51paf76bi3kmp8s43e0n5oald2ueh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

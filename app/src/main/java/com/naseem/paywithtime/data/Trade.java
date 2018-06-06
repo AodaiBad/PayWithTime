@@ -5,26 +5,34 @@ package com.naseem.paywithtime.data;
  */
 
 public class Trade {
+    private String Name;
+    private String Sub;
     private String Adress;
     private double price;
     private double Hours;
     private boolean isCompleted;
     private String imgPath;
     private String keyId;
+
     private String email;
 
-    public Trade(String name, double price, double amount) {
+    public Trade(String name, double price, double amount , String name2 , String sub) {
         this.Adress = name;
         this.price = price;
         this.Hours = amount;
+        this.Name = name2;
+        this.Sub = sub;
+        this.email = email;
         isCompleted=false;
         imgPath=null;
     }
 
-    public Trade(String name, double price, double amount, boolean isCompleted, String imgPath, String keyId) {
+    public Trade(String name, String name2, String sub, double price, double amount, boolean isCompleted, String imgPath, String keyId) {
         this.Adress = name;
         this.price = price;
         this.Hours = amount;
+        this.Sub = sub;
+        this.Name = name2;
         this.isCompleted = isCompleted;
         this.imgPath = imgPath;
         this.keyId = keyId;
@@ -86,6 +94,22 @@ public class Trade {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public String getSub() {
+        return Sub;
+    }
+
+    public void setSub(String sub) {
+        Sub = sub;
     }
 }
 

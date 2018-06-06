@@ -1,29 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="TextView" />
 
     <TextView
         android:id="@+id/tvAdress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/tvHours"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/tvPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/tvEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="TextView" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnAddres"
+            android:layout_width="311dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="Google Maps"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="89dp" />
+
+        <ImageButton
+            android:id="@+id/btnDel"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            app:srcCompat="@android:drawable/ic_menu_delete"
+            tools:layout_editor_absoluteX="977dp"
+            tools:layout_editor_absoluteY="105dp" />
+    </LinearLayout>
+
 </LinearLayout>

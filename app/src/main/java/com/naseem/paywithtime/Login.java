@@ -37,11 +37,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         auth = FirebaseAuth.getInstance();
         firebaseUser = auth.getCurrentUser();
 
-        if (firebaseUser != null&&firebaseUser.getEmail()!= null&& firebaseUser.getEmail().length()>0)
-        {
-            Intent i = new Intent(getBaseContext(),TakeHours.class);
-            startActivity(i);
-        }
+       // if (firebaseUser != null&&firebaseUser.getEmail()!= null&& firebaseUser.getEmail().length()>0)
+       // {
+            //Intent activtyIntent = new Intent(Login.this,MainPage.class);
+           // Intent activtyIntent = new Intent(getBaseContext(),MainPage.class);
+           // startActivity(activtyIntent);
+       //}
 
     }
     private void dataHandler() {
@@ -56,7 +57,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Toast.makeText(Login.this, "signIn Successful", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(getBaseContext(),TakeHours.class);
+                    Intent i = new Intent(getBaseContext(),MainPage.class);
                     startActivity(i);
                     finish();
                 } else {

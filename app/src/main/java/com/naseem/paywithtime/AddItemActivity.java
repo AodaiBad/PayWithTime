@@ -21,7 +21,7 @@ import com.naseem.paywithtime.data.Trade;
 import static com.naseem.paywithtime.R.string.Hours;
 
 public class AddItemActivity extends AppCompatActivity {
-    private EditText etAdress,etPrice,etHours;
+    private EditText etAdress,etPrice,etHours,etSub,etName;
     private Button btnSave2;
 
     @Override
@@ -33,6 +33,9 @@ public class AddItemActivity extends AppCompatActivity {
         etPrice=(EditText)findViewById(R.id.etPrice1);
         etHours=(EditText)findViewById(R.id.etHours1);
         btnSave2=(Button)findViewById(R.id.btnSave2);
+        etName=(EditText)findViewById(R.id.etName);
+        etSub=(EditText)findViewById(R.id.etSub);
+
 
         btnSave2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,10 +49,14 @@ public class AddItemActivity extends AppCompatActivity {
         String stAdress=etAdress.getText().toString();
         String stprice=etPrice.getText().toString();
         String stHours=etHours.getText().toString();
+        String stSub=etSub.getText().toString();
+        String stName=etName.getText().toString();
 
         double price=Double.parseDouble(stprice);
 
         Trade t= new Trade();
+        t.setSub(stSub);
+        t.setName(stName);
         t.setAdress(stAdress);
         t.setHours(Integer.parseInt(stHours));
         t.setPrice(Double.parseDouble(stprice));
@@ -63,6 +70,7 @@ public class AddItemActivity extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference();
         t.setEmail(email);
         String key=reference.child("mylist").push().getKey();
+        t.setKeyId(key);
         reference.child("mylist").child(key).setValue(t).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {

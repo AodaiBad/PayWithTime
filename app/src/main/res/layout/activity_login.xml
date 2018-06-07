@@ -8,17 +8,6 @@
     tools:context="com.naseem.paywithtime.Login">
 
     <Button
-        android:id="@+id/btnSiginUp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/screen_background_light_transparent"
-        android:onClick="onClick"
-        android:text="Sign Up"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/btnLogin"
-        android:layout_alignParentStart="true" />
-
-    <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,8 +15,7 @@
         android:elevation="0dp"
         android:onClick="onClick"
         android:text="Login"
-        android:layout_marginTop="27dp"
-        android:layout_below="@+id/etPass"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -77,5 +65,20 @@
         android:text="Password"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#DEDCDC" />
+
+    <CheckBox
+        android:id="@+id/cbRem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etPass"
+        android:checked="false"
+        android:shadowColor="@color/common_google_signin_btn_text_dark_default"
+        android:text="Remember me"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textColorHighlight="@color/common_google_signin_btn_text_dark_default"
+        android:textColorHint="@color/common_google_signin_btn_text_dark_default"
+        android:textColorLink="@color/common_google_signin_btn_text_dark_default" />
 
 </RelativeLayout>

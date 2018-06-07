@@ -43,7 +43,7 @@ public class TradeAdapter extends ArrayAdapter<Trade> {
         TextView tvSub = (TextView) view.findViewById(R.id.tvSub);
         TextView tvName = (TextView) view.findViewById(R.id.tvName);
         Button btnAddres = (Button) view.findViewById(R.id.btnAddres);
-        ImageButton btnDel = (ImageButton) view.findViewById(R.id.btnDel);
+        final ImageButton btnDel = (ImageButton) view.findViewById(R.id.btnDel);
 
 
         final Trade h = getItem(position);
@@ -58,11 +58,21 @@ public class TradeAdapter extends ArrayAdapter<Trade> {
                 i.setPackage("com.google.android.apps.maps");
                 getContext().startActivity(i);
 
-                del(h);
 
             }
 
         });
+
+        btnDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (v==btnDel)
+                {
+                    del(h);
+                }
+            }
+        });
+
         tvaddress.setText(h.getAdress() + "");
         tvPrice.setText(h.getPrice() + "");
         tvHours.setText(h.getHours() + "");
@@ -103,8 +113,7 @@ public class TradeAdapter extends ArrayAdapter<Trade> {
                                     Toast.makeText(getContext(), "delete successful", Toast.LENGTH_SHORT).show();
 
                                 } else {
-                                    Toast.makeText(getCont
-                                            ext(), "delete failed", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getContext(), "delete failed", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });

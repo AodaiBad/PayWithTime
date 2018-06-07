@@ -104,7 +104,7 @@ public class MainPage extends AppCompatActivity implements AdapterView.OnItemCli
 
 
          AlertDialog.Builder builder = new AlertDialog.Builder(MainPage.this);
-        builder.setTitle("nnnn");
+        builder.setTitle("Delete");
         builder.setCancelable(true);
         builder.setSingleChoiceItems(a, 0, new DialogInterface.OnClickListener() {
             @Override
